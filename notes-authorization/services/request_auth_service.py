@@ -1,6 +1,10 @@
+from asyncio import Protocol
+
 from starlette.requests import Request
 
-from services.request_auth import AuthServiceProtocol
+
+class AuthServiceProtocol(Protocol):
+    async def is_authorized(self, request: Request) -> bool: ...
 
 
 class APIKeyAuthService(AuthServiceProtocol):

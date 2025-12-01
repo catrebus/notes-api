@@ -4,7 +4,7 @@ from starlette.middleware.base import BaseHTTPMiddleware
 from starlette.requests import Request
 from starlette.responses import Response
 
-from services.request_auth import AuthServiceProtocol
+from services import AuthServiceProtocol
 
 
 class AuthMiddleware(BaseHTTPMiddleware):

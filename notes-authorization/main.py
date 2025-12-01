@@ -3,8 +3,7 @@ from fastapi import FastAPI
 
 from authorization_config import Config
 from middleware import AuthMiddleware
-
-from services.request_auth import APIKeyAuthService
+from services import APIKeyAuthService
 
 app = FastAPI()
 
