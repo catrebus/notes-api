@@ -1,0 +1,2 @@
+from .registration_form import RegistrationForm
+from .authorization_form import AuthorizationForm
