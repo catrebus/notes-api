@@ -1,2 +1,3 @@
-from .protocols import UserRepositoryProtocol
+from .protocols import UserRepositoryProtocol, EmailVerificationCodeRepositoryProtocol
 from .user_repository import UserRepository
+from .email_verification_code_repository import EmailVerificationCodeRepository

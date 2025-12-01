@@ -1,1 +1,2 @@
 from .request_auth_service import APIKeyAuthService, AuthServiceProtocol
+from .email_verification_service import EmailVerificationServiceProtocol

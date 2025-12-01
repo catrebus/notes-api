@@ -12,7 +12,7 @@ class UserRepository(UserRepositoryProtocol):
     def __init__(self, session: AsyncSession):
         self.session = session
 
-    async def save(self, user: User):
+    async def save(self, user: User) -> Optional[User]:
         """Добавление нового пользователя в бд"""
         self.session.add(user)
         try:
