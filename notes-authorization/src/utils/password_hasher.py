@@ -19,4 +19,4 @@ class PasswordHasher(PasswordHasherProtocol):
         return await asyncio.to_thread(bcrypt.hashpw, password.encode(), bcrypt.gensalt())
 
     async def verify_password(self, password: str, hashed_password: str) -> bool:
-        return asyncio.to_thread(bcrypt.checkpw, password.encode(), hashed_password.encode())
+        return await asyncio.to_thread(bcrypt.checkpw, password.encode(), hashed_password.encode())

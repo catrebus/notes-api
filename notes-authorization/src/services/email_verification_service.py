@@ -8,7 +8,7 @@ import aiosmtplib
 
 class EmailVerificationServiceProtocol(ABC):
     @abstractmethod
-    async def generate_verification_code(self) -> str: ...
+    def generate_verification_code(self) -> str: ...
 
     @abstractmethod
     async def send_verification_email(self, email:str, code:str) -> None: ...
@@ -20,7 +20,7 @@ class EmailVerificationService(EmailVerificationServiceProtocol):
         self._smtp_password = smtp_password
         self._smtp_hostname = smtp_hostname
 
-    async def generate_verification_code(self) -> str:
+    def generate_verification_code(self) -> str:
         return f"{secrets.randbelow(1_000_000):06d}"
 
     async def send_verification_email(self, email: str, code: str) -> None:

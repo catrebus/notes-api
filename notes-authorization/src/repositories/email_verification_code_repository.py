@@ -15,11 +15,8 @@ class EmailVerificationCodeRepository(EmailVerificationCodeRepositoryProtocol):
     async def save(self, code: EmailVerificationCode) -> Optional[EmailVerificationCode]:
         """Сохранение кода в бд"""
         self.session.add(code)
-        try:
-            await self.session.commit()
-        except IntegrityError:
-            await self.session.rollback()
-            raise
+        await self.session.commit()
+
         await self.session.refresh(code)
         return code
 
