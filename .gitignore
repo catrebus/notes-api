@@ -209,3 +209,6 @@ __marimo__/
 
 # authorization_config
 config_private.py
+
+# tests
+tests

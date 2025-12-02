@@ -4,8 +4,8 @@ from sqlalchemy import select
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from database import User
-from repositories import UserRepositoryProtocol
+from src.database import User
+from src.repositories import UserRepositoryProtocol
 
 
 class UserRepository(UserRepositoryProtocol):

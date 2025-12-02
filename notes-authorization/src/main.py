@@ -1,9 +1,9 @@
 import uvicorn
 from fastapi import FastAPI
 
-from authorization_config import Config
-from middleware import AuthMiddleware
-from services import APIKeyAuthService
+from src.authorization_config import Config
+from src.middleware import AuthMiddleware
+from src.services import APIKeyAuthService
 
 app = FastAPI()
 

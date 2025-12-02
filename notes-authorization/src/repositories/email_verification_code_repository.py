@@ -4,8 +4,8 @@ from sqlalchemy import select
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from database import EmailVerificationCode
-from repositories import EmailVerificationCodeRepositoryProtocol
+from src.repositories import EmailVerificationCodeRepositoryProtocol
+from src.database.db_models import EmailVerificationCode
 
 
 class EmailVerificationCodeRepository(EmailVerificationCodeRepositoryProtocol):

@@ -1,1 +1,1 @@
-from .db_models import User, EmailVerificationCode
+from .db_models import Base, User, EmailVerificationCode
