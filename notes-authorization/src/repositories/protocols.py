@@ -1,8 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import Optional
 
-from database import User
-from database.db_models import EmailVerificationCode
+from database import User, EmailVerificationCode
 
 
 class UserRepositoryProtocol(ABC):
