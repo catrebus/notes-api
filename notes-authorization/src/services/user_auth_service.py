@@ -21,7 +21,10 @@ class UserAuthServiceProtocol(ABC):
 
 
 class UserAuthService(UserAuthServiceProtocol):
-    def __init__(self, user_repo: UserRepositoryProtocol, code_repo: EmailVerificationCodeRepositoryProtocol, email_service: EmailVerificationServiceProtocol, password_hasher: PasswordHasherProtocol):
+    def __init__(self, user_repo: UserRepositoryProtocol,
+                 code_repo: EmailVerificationCodeRepositoryProtocol,
+                 email_service: EmailVerificationServiceProtocol,
+                 password_hasher: PasswordHasherProtocol):
         self.user_repo = user_repo
         self.code_repo = code_repo
         self.email_service = email_service

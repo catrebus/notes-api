@@ -3,12 +3,13 @@ from fastapi import FastAPI
 
 from src.authorization_config import Config
 from src.middleware import AuthMiddleware
+from src.routers import main_router
 from src.services import APIKeyAuthService
 
 app = FastAPI()
 
 # Подключение router
-
+app.include_router(main_router)
 
 # Подключение middleware
 app.add_middleware(AuthMiddleware, auth_service=APIKeyAuthService(Config.AUTHORIZATION_API_KEY))
